@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Textbox Color Change</title>
+  </head>
+  <body>
+    <h2>Focus & Blur Event Example</h2>
+
+    <label for="textbox">Enter Text:</label>
+    <input
+      type="text"
+      id="textbox"
+      onfocus="changeColor()"
+      onblur="resetColor()"
+    />
+
+    <script>
+      function changeColor() {
+        let textbox = document.getElementById("textbox");
+        textbox.style.backgroundColor = "yellow"; // Change background color
+        textbox.style.color = "blue"; // Change text color
+      }
+
+      function resetColor() {
+        let textbox = document.getElementById("textbox");
+        textbox.style.backgroundColor = "white"; // Reset background color
+        textbox.style.color = "black"; // Reset text color
+      }
+    </script>
+  </body>
+</html>

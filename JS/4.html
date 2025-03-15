@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background Color Changer</title>
+  </head>
+  <body>
+    <h2>Click the button to change the background color!</h2>
+    <button onclick="changeBackground()">Change Color</button>
+
+    <script>
+      // Array of colors
+      const colors = [
+        "violet",
+        "indigo",
+        "blue",
+        "green",
+        "yellow",
+        "orange",
+        "red",
+      ];
+
+      let index = 0;
+
+      function changeBackground() {
+        document.body.style.backgroundColor = colors[index];
+        index < 6 ? index++ : (index = 0);
+      }
+    </script>
+  </body>
+</html>

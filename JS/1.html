@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfect, Abundant, or Deficient Number</title>
+</head>
+<body>
+    <h2>Check if a Number is Perfect, Abundant, or Deficient</h2>
+    <label for="number">Enter a Number:</label>
+    <input type="number" id="number">
+    <button onclick="checkNumber()">Check</button>
+
+    <script>
+        function checkNumber() {
+            let num = parseInt(document.getElementById("number").value);
+            
+            if (isNaN(num) || num <= 0) {
+                alert("Please enter a valid positive number.");
+                return;
+            }
+
+            let sum = 0;
+
+            // Calculate sum of proper divisors
+            for (let i = 1; i <= num / 2; i++) {
+                if (num % i === 0) {
+                    sum += i;
+                }
+            }
+
+            // Determine and display the result
+            if (sum === num) {
+                alert(num + " is a Perfect Number.");
+            } else if (sum > num) {
+                alert(num + " is an Abundant Number.");
+            } else {
+                alert(num + " is a Deficient Number.");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+abc = ["x", "y"]
+abc = {x:"1", y:"2"}
+
+`${var}`
+
+condition ? true_block : false_block
+
+getElementById()
+getElementById().value
+
+parseInt()
+parseFloat()
+
+alert()
+prompt()
+
+isNaN()
+Math.sqrt()
+
+
+toFixed()
+toString()
+padStart()
+
+abc.textContent
+abc.innerText
+abc.style.backgroundColor
+abc.style.color
+abc.value
+
+abc.length
+abc.push()
+abc.join(", ")
+
+new Date()
+
+getDay()
+getHours()
+getMinutes()
+getSeconds()
+
+setInterval()
+
+select<>
+
+test()
+/^[^@]+@[^@]+\.[a-zA-Z]{2,}$/
+
+capitals[country] || ""

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Validator</title>
+  </head>
+  <body>
+    <h2>Password Validation</h2>
+
+    <label for="password">Enter Password:</label>
+    <input type="password" id="password" /><br /><br />
+
+    <label for="confirmPassword">Confirm Password:</label>
+    <input type="password" id="confirmPassword" /><br /><br />
+
+    <button onclick="validatePassword()">Validate</button>
+
+    <p id="result"></p>
+
+    <script>
+      function validatePassword() {
+        let password = document.getElementById("password").value;
+        let confirmPassword = document.getElementById("confirmPassword").value;
+        let result = document.getElementById("result");
+
+        if (password.length < 8) {
+          result.textContent =
+            "❌ Password must be at least 8 characters long.";
+          result.style.color = "red";
+          return;
+        }
+
+        if (password !== confirmPassword) {
+          result.textContent = "❌ Passwords do not match.";
+          result.style.color = "red";
+          return;
+        }
+
+        result.textContent = "✅ Password is valid!";
+        result.style.color = "green";
+      }
+    </script>
+  </body>
+</html>

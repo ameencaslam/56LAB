@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Sum</title>
+  </head>
+  <body>
+    <h2>Click the button to enter numbers and get the sum!</h2>
+    <button onclick="getArraySum()">Enter Numbers</button>
+
+    <script>
+      function getArraySum() {
+        let numbers = []; // Array to store numbers
+        let count = parseInt(prompt("How many numbers do you want to enter?"));
+
+        if (isNaN(count) || count <= 0) {
+          alert("Invalid input. Please enter a valid number.");
+          return;
+        }
+
+        for (let i = 0; i < count; i++) {
+          let num = parseFloat(prompt(`Enter number ${i + 1}:`));
+          if (!isNaN(num)) {
+            numbers.push(num);
+          } else {
+            alert("Invalid input. Please enter a number.");
+            return;
+          }
+        }
+
+        let sum = 0;
+        for (let i = 0; i < count; i++) {
+          sum += numbers[i];
+        }
+        alert(`The sum of the entered numbers is: ${sum}`);
+      }
+    </script>
+  </body>
+</html>

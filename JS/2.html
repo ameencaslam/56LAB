@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Triangle Type and Area</title>
+  </head>
+  <body>
+    <h2>Check Triangle Type and Find its Area</h2>
+
+    <label for="side1">Enter Side 1:</label>
+    <input type="number" id="side1" /><br /><br />
+
+    <label for="side2">Enter Side 2:</label>
+    <input type="number" id="side2" /><br /><br />
+
+    <label for="side3">Enter Side 3:</label>
+    <input type="number" id="side3" /><br /><br />
+
+    <button onclick="checkTriangle()">Check Triangle</button>
+
+    <script>
+      function checkTriangle() {
+        let a = parseFloat(document.getElementById("side1").value);
+        let b = parseFloat(document.getElementById("side2").value);
+        let c = parseFloat(document.getElementById("side3").value);
+
+        if (isNaN(a) || isNaN(b) || isNaN(c) || a <= 0 || b <= 0 || c <= 0) {
+          alert("Please enter valid positive numbers.");
+          return;
+        }
+
+        // Check if the sides form a valid triangle (Triangle Inequality Theorem)
+        if (a + b <= c || a + c <= b || b + c <= a) {
+          alert("The given sides do not form a valid triangle.");
+          return;
+        }
+
+        let type = "";
+        if (a === b && b === c) {
+          type = "Equilateral Triangle";
+        } else if (a === b || b === c || a === c) {
+          type = "Isosceles Triangle";
+        } else {
+          type = "Scalene Triangle";
+        }
+
+        // Calculate the area using Heron's Formula
+        let s = (a + b + c) / 2; // Semi-perimeter
+        let area = Math.sqrt(s * (s - a) * (s - b) * (s - c));
+
+        alert(
+          `The triangle is a ${type}.\nArea: ${area.toFixed(2)} square units.`
+        );
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Country Capital Selector</title>
+  </head>
+  <body>
+    <h2>Select a Country to See its Capital</h2>
+
+    <label for="country">Select Country:</label>
+    <select id="country" onchange="showCapital()">
+      <option value="">--Select--</option>
+      <option value="India">India</option>
+      <option value="USA">USA</option>
+      <option value="France">France</option>
+      <option value="Japan">Japan</option>
+      <option value="Germany">Germany</option>
+    </select>
+
+    <br /><br />
+
+    <label for="capital">Capital:</label>
+    <input type="text" id="capital" readonly />
+
+    <script>
+      function showCapital() {
+        let country = document.getElementById("country").value;
+        let capitalBox = document.getElementById("capital");
+
+        let capitals = {
+          India: "New Delhi",
+          USA: "Washington D.C.",
+          France: "Paris",
+          Japan: "Tokyo",
+          Germany: "Berlin",
+        };
+
+        capitalBox.value = capitals[country] || ""; // Set capital or empty if no selection
+      }
+    </script>
+  </body>
+</html>
