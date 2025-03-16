@@ -1,12 +1,12 @@
 import java.util.Scanner;
 
-class q8_sumrev {
+class q8_Sumrev {
     public int num;
     public int sum;
     public int rev;
 
     // Constructor to initialize the number
-    public q8_sumrev(int num) {
+    public q8_Sumrev(int num) {
         this.num = num;
     }
 
@@ -32,7 +32,7 @@ public class q8 {
         int num = sc.nextInt();
         
         // Creating object
-        q8_sumrev obj = new q8_sumrev(num);
+        q8_Sumrev obj = new q8_Sumrev(num);
 
         obj.calc();
         
