@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bank Transaction</title>
+  </head>
+  <body>
+    <h2>Bank Transaction</h2>
+    <form action="20.php" method="POST">
+      <label>Account Number:</label>
+      <input type="number" name="accno" required /><br /><br />
+
+      <label>Amount:</label>
+      <input type="number" step="0.01" name="amount" required /><br /><br />
+
+      <label>Transaction Type:</label>
+      <input type="radio" name="transaction" value="deposit" required /> Deposit
+      <input type="radio" name="transaction" value="withdraw" required />
+      Withdraw<br /><br />
+
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>

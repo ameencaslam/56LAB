@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multiplication Table</title>
+    <script>
+      function getTable() {
+        let num = document.getElementById("number").value;
+        let xhr = new XMLHttpRequest();
+        xhr.open("GET", "23.php?num=" + num, true);
+        xhr.onreadystatechange = function () {
+          document.getElementById("result").innerHTML = xhr.responseText;
+        };
+        xhr.send();
+      }
+    </script>
+  </head>
+  <body>
+    <h2>Multiplication Table</h2>
+    <input type="number" id="number" placeholder="Enter a number" />
+    <button onclick="getTable()">Generate</button>
+    <div id="result"></div>
+  </body>
+</html>
