@@ -1,0 +1,73 @@
+=============================================
+
+# HTML
+
+form => action, method
+input => type, name, value
+select =>name,,, -> option => value
+
+=============================================
+
+# PHP
+
+$_SERVER['REQUEST_METHOD']
+$_POST['name']
+
+$_COOKIE[]
+
+setcookie()
+
+$_FILES[]
+
+basename()
+
+move_uploaded_file()
+
+echo " " 
+
+$var
+
+strrev()
+
+session_start()
+
+isset()
+
+date_default_timezone_set()
+
+date()
+
+time()
+
+pg_connect()
+pg_escape_string()
+pg_query()
+pg_num_rows()
+pg_fetch_assoc()
+pg_fetch_result()
+
+floatval()
+intval()
+
+switch()
+
+die()
+
+foreach()
+
+sort()
+array_unique()
+array_pop()
+array_reverse()
+in_array()
+
+SELECT COUNT(*) FROM
+UPDATE X SET Y = 
+
+XMLHttpRequest()
+    .open()
+    .onreadystatechange()
+    .responseText
+    .send()
+
+=============================================

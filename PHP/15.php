@@ -11,18 +11,17 @@ if (!$conn) {
 // Handle login
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = pg_escape_string($conn, $_POST['username']);
-    $password = $_POST['password']; // Hash password to match DB
-
+    $password = $_POST['password'];
+    
     $query = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
     $result = pg_query($conn, $query);
 
     if (pg_num_rows($result) == 1) {
-        $_SESSION['username'] = $username;
         echo "Login successful! ";
-        echo "<h2>Welcome, ".$_SESSION['username']."!</h2>";
+        echo "<h2>Welcome, ".$username."!</h2><br>";
         $word = "Logout";
     } else {
-        echo "Invalid username or password.";
+        echo "Invalid username or password.<br>";
         $word = "Try Again";
     }
 
