@@ -1,0 +1,32 @@
+package com.example.zeta;
+
+import androidx.appcompat.app.AppCompatActivity;
+import android.app.TimePickerDialog;
+import android.os.Bundle;
+import android.widget.Button;
+import android.widget.TextView;
+import java.util.Calendar;
+
+public class MainActivity extends AppCompatActivity {
+
+    private TextView timeDisplay;
+    private Button selectTimeButton;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        // Initialize UI components
+        timeDisplay = findViewById(R.id.timeDisplay);
+        selectTimeButton = findViewById(R.id.selectTimeButton);
+
+        // Set click listener using Lambda
+        selectTimeButton.setOnClickListener(v -> {
+            new TimePickerDialog(this, (view, selectedHour, selectedMinute) -> {
+                String formattedTime = String.format("%02d:%02d", selectedHour, selectedMinute);
+                timeDisplay.setText("Selected Time: " + formattedTime);
+            }, 0, 0, true).show(); // 'true' for 24-hour format
+        });
+    }
+}

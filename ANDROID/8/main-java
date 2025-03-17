@@ -1,0 +1,60 @@
+package com.example.zeta;
+
+import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle;
+import android.widget.Button;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+
+    private Button btn;
+    private Button btn2;
+    private TextView timerDisplay;
+    private boolean isRunning = false;
+    private int seconds = 0;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        btn = findViewById(R.id.btn);
+        btn2 = findViewById(R.id.btn2);
+        timerDisplay = findViewById(R.id.timerDisplay);
+
+        btn.setOnClickListener(v -> {
+            if (!isRunning) {
+                isRunning = true;
+                btn.setText("Stop");
+                updateTimer(); // Start the timer loop
+            } else {
+                isRunning = false;
+                btn.setText("Start");
+            }
+        });
+
+        btn2.setOnClickListener(v -> {
+            isRunning = false;
+            btn.setText("Start");
+            seconds = 0;
+            timerDisplay.setText("00:00");
+        });
+    }
+
+    private void updateTimer() {
+        if (isRunning) {
+            seconds++;
+
+            // Calculate minutes and seconds
+            int minutes = seconds / 60;
+            int remainingSeconds = seconds % 60;
+
+            // Format time as MM:SS
+            String timeFormatted = String.format("%02d:%02d", minutes, remainingSeconds);
+            timerDisplay.setText(timeFormatted);
+
+            // Delay the next update by 1 second (1000ms)
+            timerDisplay.postDelayed(this::updateTimer, 1000);
+        }
+    }
+}

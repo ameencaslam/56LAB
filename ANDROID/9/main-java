@@ -1,0 +1,43 @@
+package com.example.zeta;
+
+import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.Toast;
+
+public class MainActivity extends AppCompatActivity {
+
+    private CheckBox item1, item2, item3;
+    private Button checkButton;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        // Initialize UI components
+        item1 = findViewById(R.id.item1);
+        item2 = findViewById(R.id.item2);
+        item3 = findViewById(R.id.item3);
+        checkButton = findViewById(R.id.checkButton);
+
+        // Set click listener using Lambda
+        checkButton.setOnClickListener(v -> checkItems());
+    }
+
+    private void checkItems() {
+        StringBuilder result = new StringBuilder("Selected: ");
+
+        if (item1.isChecked()) result.append("Item 1 ");
+        if (item2.isChecked()) result.append("Item 2 ");
+        if (item3.isChecked()) result.append("Item 3 ");
+
+        if (result.toString().equals("Selected: ")) {
+            result.append("None");
+        }
+
+        Toast.makeText(this, result.toString(), Toast.LENGTH_SHORT).show();
+    }
+}

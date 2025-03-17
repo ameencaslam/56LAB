@@ -1,0 +1,29 @@
+package com.example.zeta;
+
+import android.os.Bundle;
+import android.widget.Button;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Toast;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        RadioGroup radioGroup = findViewById(R.id.radioGroup);
+        Button btnSubmit = findViewById(R.id.btnSubmit);
+
+        btnSubmit.setOnClickListener(v -> {
+            int selectedId = radioGroup.getCheckedRadioButtonId();
+            if (selectedId != -1) {
+                String gender = ((RadioButton) findViewById(selectedId)).getText().toString();
+                Toast.makeText(this, "Selected: " + gender, Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(this, "Please select gender", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+}
