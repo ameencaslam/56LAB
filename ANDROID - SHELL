@@ -14,7 +14,11 @@ PART A - Android Programming
 13. Write a Program to Display the items in a list
 14. Write a program to fetch data from an EditText and display it in a TextView 15. Write a program to display multiplication table of a given number
 16. Write a program to Get IP Address of the device
-17. Write a program to Change the Background colour of the Activity 18. Write a program to Change the Background image 19. Write a program using array adapter 20. Write a program to start another activity from your own activity using intent 21. Write a program for Log in Using username and password) 
+17. Write a program to Change the Background colour of the Activity 
+18. Write a program to Change the Background image 
+19. Write a program using array adapter 
+20. Write a program to start another activity from your own activity using intent 
+21. Write a program for Log in Using username and password) 
 
 
 PART B – SHELL Programming
@@ -41,4 +45,5 @@ PART B – SHELL Programming
 21. Write a shell script which uses all the file test operators
 22. Write a shell script to copy the contents of file to another. Input file names through command line. The copy should not be allowed if second file exists.
 23. Write a shell script to find number of vowels, consonants, numbers in a given string.
-24. Write a shell script to perform operations like display, list, make directory and copy, rename, delete 25. Write a shell script to compare two files and remove one of them if they are same
+24. Write a shell script to perform operations like display, list, make directory and copy, rename, delete 
+25. Write a shell script to compare two files and remove one of them if they are same
