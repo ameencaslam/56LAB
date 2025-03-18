@@ -1,0 +1,28 @@
+package com.example.zeta;
+
+import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        // Initialize UI elements
+        EditText editText = findViewById(R.id.editText);
+        Button button = findViewById(R.id.button);
+        TextView textView = findViewById(R.id.textView);
+
+        // Set click listener for the button
+        button.setOnClickListener(v -> {
+            // Fetch text from EditText and set it to TextView
+            String inputText = editText.getText().toString();
+            textView.setText(inputText);
+        });
+    }
+}

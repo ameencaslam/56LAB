@@ -1,0 +1,38 @@
+package com.example.zeta;
+
+import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        // Initialize UI elements
+        EditText editText = findViewById(R.id.editText);
+        Button button = findViewById(R.id.button);
+        TextView textView = findViewById(R.id.textView);
+
+        // Set click listener for the button
+        button.setOnClickListener(v -> {
+            String input = editText.getText().toString();
+            if (!input.isEmpty()) {
+                int number = Integer.parseInt(input);
+                StringBuilder table = new StringBuilder();
+
+                // Generate multiplication table
+                for (int i = 1; i <= 10; i++) {
+                    table.append(number).append(" x ").append(i).append(" = ").append(number * i).append("\n");
+                }
+
+                // Display result in TextView
+                textView.setText(table.toString());
+            }
+        });
+    }
+}
