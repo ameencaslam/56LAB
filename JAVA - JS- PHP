@@ -1,0 +1,89 @@
+PART A - JAVA
+
+1. Write a program to find the sum, difference, product, quotient and remainder of two numbers passed as command line argument.
+2. Given the sides of a triangle, write a program to check whether the triangle is equilateral, isosceles or scalene and find its area.
+3. Read an array of 10 or more numbers and write a program to find the
+a) Smallest element in the array
+b) Largest element in the array
+c) Second largest element in the array
+4. Write a program to perform base conversion
+a) Integer to binary
+b) Integer to Octal
+c) Integer to Hexadecimal
+5. Write a program to merge two arrays.
+6. Java Programming Code to Find HCF LCM of Two Numbers
+7. Write a program to find the trace and transpose of a matrix.
+8. Write java program to find the sum of the digits and reverse of a given number using class and objects.
+9. Write a Java Programming Code to Check given string Anagram or Not. If the two strings are anagram to each other, then one string can be rearranged to form the other string. For Example: abc and cba are anagram.
+10. Write a Java Program to remove all vowels from a string
+11. Create a class Student to read and display the student details. Create another class mark inherit from student to read marks of 5 subjects and find total and average. Write a Java program to display the result of a student.
+12. Using class and objects, write a java program to find the sum of two complex numbers (Hint: Use object as parameter to function).
+13. Write a program to count and display total number of objects created to a class (Hint: static members).
+14. Write a java program to find the volume of cube, rectangular box, cylinder using function overloading.
+15. Create an abstract class shape and create TwoDim and ThreeDim as sub classes. Create classes square and triangle derived from TwoDim and sphere and cube derived from ThreeDim. Write a program to determinethe area of various shapes.
+16. Create an interface volume with member variable pi and methods readdata () and dispvolume (). Create two classes sphere and cylinder to implement this interface. Write a Java program to find the volume.
+17. Write a multi thread java program for displaying odd numbers and even numbers up to a limit (Hint: Implement thread using Runnable interface).
+18. Create a class Account to deposit and withdraw money from a bank. Create a user defined exception “MinBalExp‟ to be invoked when the withdrawal amountis greater than balance.
+19. Write an applet to display a rectangle with specified coordinate and colour passed as parameter from the HTML file.
+20. Create an AWT application to add, remove items in a list box.
+21. Create a database table employee (id, name, design, and dept.) and insert some records. Write a Java program to list the employee details using JDBC.
+
+
+
+PART B- Java Script & PHP
+
+Java Script
+
+1. Write a JavaScript program to check whether a given number is perfect, abundant or deficient. Use alert box to display the output.
+2. Write a JavaScript program to check whether the given sides can form a triangle. If yes, find the type (isosceles, equilateral and scalene) and area of the triangle. Use prompt dialogue box to accept the sides.
+3. Design a form that accepts two integers. Provide 4 buttons for Add, Subtract, Multiply, Divide. Add JavaScript program to add, subtract, multiply and divide the given numbers when these buttons are clicked. Use output element to display the results.
+4. Write a JavaScript program to store different colors in an array and change the background color of the page using this array elements
+5. Write a JavaScript program to create clock with a timing event.
+6. Write a JavaScript Program to validate email based on the following condition
+ Mail id must contain the @ and . character
+ There must be at least one character before and after the @.
+ There must be at least two characters after . (dot).
+7. Write a JavaScript program for Password validation based on the following condition
+ Password and confirm password must be same
+ Length of password must be greater than 8 characters
+8. Write a JavaScript Program to create an Array and read values using Prompt popup box and display the sum of elements in an Alert Box
+9. Change the text colour and back colour of a TextBox using onfocus and onBlur event
+10. Write a JavaScript program to display Capital of a country using onchange event. The country is selected from a select box and capital is displayed on a TextBox
+11. Write a JavaScript program to find 1st January be a Sunday between a range of years.
+
+
+PHP
+
+12. Create a PHP program to display the bio data of a person by reading the personal details using an HTML page.
+13. Write a PHP function to reverse a string
+14. Write a PHP program to check whether a given number is perfect, abundant or deficient.
+15. Create a login page using database.
+16. Create a table student with fields roll no, name, mark, grade. Insert some records in the table. Write a PHP program to display the mark list of a student by accepting the register no of the student.
+17. Write a PHP application to generate the pay slip of an employee by accepting name, basic salary and designation. The net salary will be calculated based on the following conditions.
+Designation conveyance extra allowance
+allowance
+Manager 1000 500
+Supervisor 750 200
+Clerk 500 100
+Peon 250
+Income tax
+Gross upto 2500 0
+Gross upto 4000 3%
+Gross upto 5000 5%
+Gross >5000 8%
+HRA – 25 %
+Gross= basic + HRA + conveyance + extra
+Net = Gross – Income tax
+18. PHP program to store current date-time in a cookie and display the Last visited date-time on the web page upon revisiting the same web page.
+19. Create a table product with fields itemcode, itemname, unitprice. Write PHP program to insert 5 records into the table and display it in a table format.
+20. Create a table bank with the following fields accno, cust_name, balance. Insert some Records. Design HTML page to accept Account Number and amount using TextBoxes and type of transaction (Deposit or Withdrawal) using Radio Button. Write PHP program to update balance according to the transaction
+21. Write an HTML page to display a list of fruits in a list box. Write php program to display the selected fruits in a webpage.
+22. Write a PHP program to create an array and store 10 names in the array. Do the following operations.
+a. Display the contents using for each statement.
+b. Display the array in a sorted order.
+c. Display the array without the duplicate elements
+d. Remove the last element and display
+e. Display the array in reverse order
+f. Search an element in the given array.
+23. Display Multiplication table using PHP and AJAX
+24. Write a PHP script to upload the file to the server through HTML Page
